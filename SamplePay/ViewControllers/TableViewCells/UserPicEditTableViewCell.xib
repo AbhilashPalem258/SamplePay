@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="282" id="Ujr-gF-cNG" customClass="UserPicEditTableViewCell" customModule="SamplePay" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="282"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ujr-gF-cNG" id="Zjp-UA-Lid">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="281.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MEM-od-4ho" customClass="RUIWhiteGreenGradientView" customModule="SamplePay" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="281.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder_photo" translatesAutoresizingMaskIntoConstraints="NO" id="Nti-un-HJA" customClass="RUINetworkImageView" customModule="SamplePay" customModuleProvider="target">
+                                <rect key="frame" x="85" y="66" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="hNh-Q0-mig"/>
+                                    <constraint firstAttribute="height" constant="150" id="jfQ-Ar-BaQ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="borderColor" value="AppWhite"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="borderWidth" value="3"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="cornerRadius" value="100"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera_button" translatesAutoresizingMaskIntoConstraints="NO" id="moh-rq-yQG" customClass="RUIBorderedClickableImageView" customModule="SamplePay" customModuleProvider="target">
+                                <rect key="frame" x="185" y="166" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Tzx-Dr-wDh"/>
+                                    <constraint firstAttribute="height" constant="50" id="bcD-Ks-9BB"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="cornerRadius" value="25"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Nti-un-HJA" firstAttribute="centerY" secondItem="MEM-od-4ho" secondAttribute="centerY" id="4cA-kV-93t"/>
+                            <constraint firstItem="Nti-un-HJA" firstAttribute="centerX" secondItem="MEM-od-4ho" secondAttribute="centerX" id="UcC-cv-wXv"/>
+                            <constraint firstItem="Nti-un-HJA" firstAttribute="trailing" secondItem="moh-rq-yQG" secondAttribute="trailing" id="ZBs-QX-FdE"/>
+                            <constraint firstItem="Nti-un-HJA" firstAttribute="bottom" secondItem="moh-rq-yQG" secondAttribute="bottom" id="rtE-t8-3O1"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="MEM-od-4ho" secondAttribute="trailing" id="NOe-FH-SpO"/>
+                    <constraint firstAttribute="bottom" secondItem="MEM-od-4ho" secondAttribute="bottom" id="fhb-PQ-R2l"/>
+                    <constraint firstItem="MEM-od-4ho" firstAttribute="top" secondItem="Zjp-UA-Lid" secondAttribute="top" id="hhq-jd-aXl"/>
+                    <constraint firstItem="MEM-od-4ho" firstAttribute="leading" secondItem="Zjp-UA-Lid" secondAttribute="leading" id="iSn-is-SXK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="EWQ-5T-h6v"/>
+            <connections>
+                <outlet property="cameraActionButton" destination="moh-rq-yQG" id="UZN-hh-QCn"/>
+                <outlet property="profileImgView" destination="Nti-un-HJA" id="svl-BP-2Xc"/>
+            </connections>
+            <point key="canvasLocation" x="137.59999999999999" y="261.76911544227886"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="camera_button" width="16" height="16"/>
+        <image name="placeholder_photo" width="16" height="16"/>
+    </resources>
+</document>
