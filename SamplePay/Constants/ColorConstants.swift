@@ -11,4 +11,5 @@ struct ColorConstants {
     static let clear = "clear"
     static let textBlack = "textBlack"
     static let lightGreyHeading = "lightGreyHeading"
+    static let whiteBGColor = "whiteBGColor"
 }

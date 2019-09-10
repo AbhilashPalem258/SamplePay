@@ -48,6 +48,7 @@
 		FA70F8B823279C880033794E /* SamplePay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA170D852326FEF0002CE4AD /* SamplePay.framework */; };
 		FA70F8BA23279C8D0033794E /* SamplePay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA170D852326FEF0002CE4AD /* SamplePay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FA70F8BF23279EF20033794E /* SPImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA70F8BE23279EF20033794E /* SPImages.xcassets */; };
+		FA8180FB2327CF8300F71568 /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8180FA2327CF8300F71568 /* Validators.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,7 @@
 		FA70F8B123279C270033794E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA70F8B323279C270033794E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA70F8BE23279EF20033794E /* SPImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SPImages.xcassets; sourceTree = "<group>"; };
+		FA8180FA2327CF8300F71568 /* Validators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 		FA170DA02326FFA1002CE4AD /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				FA8180FA2327CF8300F71568 /* Validators.swift */,
 				FA170DBC232700D3002CE4AD /* Colors.swift */,
 				FA170DBE232700D3002CE4AD /* extensions.swift */,
 				FA170DBB232700D3002CE4AD /* Font.swift */,
@@ -390,6 +393,7 @@
 				FA170DAA232700B4002CE4AD /* RUILabel.swift in Sources */,
 				FA170DC0232700D4002CE4AD /* Font.swift in Sources */,
 				FA170DC3232700D4002CE4AD /* extensions.swift in Sources */,
+				FA8180FB2327CF8300F71568 /* Validators.swift in Sources */,
 				FA170DC7232700E1002CE4AD /* AppConstants.swift in Sources */,
 				FA170DCF232700F4002CE4AD /* UserDetailTableViewCell.swift in Sources */,
 				FA170DAE232700BE002CE4AD /* User.swift in Sources */,

@@ -24,6 +24,9 @@ extension UIColor {
     static var CDGreen: UIColor {
         return  UIColor(red: 221.0/255.0, green: 245.0/255.0, blue: 240.0/255.0, alpha: 1)
     }
+    static var BarButtonGreen: UIColor {
+        return UIColor.init(red: 0/255.0, green: 234/255.0, blue: 195/255.0, alpha: 1)
+    }
     
     
     static func getColorFromString(colorInString: String?) -> UIColor{
@@ -33,6 +36,9 @@ extension UIColor {
         
         if(colorInStr.caseInsensitiveCompare(ColorConstants.textBlack) == ComparisonResult.orderedSame){
             actualColor = UIColor.TextBlack
+        }
+        else if(colorInStr.caseInsensitiveCompare(ColorConstants.whiteBGColor) == ComparisonResult.orderedSame){
+            actualColor = UIColor.WhiteBGColor
         }
         else if (colorInStr.caseInsensitiveCompare(ColorConstants.clear) == ComparisonResult.orderedSame){
             actualColor = UIColor.clear

@@ -8,12 +8,12 @@
 
 import Foundation
 
-public class User {
+public final class User {
     public var firstName: String?
     public var lastName: String?
-    public var profilePic: String?
     public var mobile: String?
     public var email: String?
+    public var profilePic: UIImage?
     
     public var fullName: String {
         var name = ""
@@ -24,5 +24,15 @@ public class User {
             name += "\(lastName)"
         }
         return name
+    }
+}
+extension User: CustomStringConvertible {
+    public var description: String {
+        return """
+                First Name  -> \(firstName ?? "")
+                Last Name   -> \(lastName ?? "")
+                Mobile      -> \(mobile ?? "")
+                Email       -> \(email ?? "")
+          """
     }
 }

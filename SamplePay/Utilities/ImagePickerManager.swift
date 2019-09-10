@@ -8,7 +8,8 @@
 
 import UIKit
 
-class ImagePickerManager: NSObject, UINavigationControllerDelegate {
+//MARK:- ImagePickerManager
+final class ImagePickerManager: NSObject, UINavigationControllerDelegate {
     
     static let shared: ImagePickerManager = ImagePickerManager.init()
     private override init() {
@@ -38,6 +39,7 @@ class ImagePickerManager: NSObject, UINavigationControllerDelegate {
         }
     }
 }
+//MARK:- ImagePickerManager: UIImagePickerControllerDelegate
 extension ImagePickerManager: UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[.originalImage] as? UIImage

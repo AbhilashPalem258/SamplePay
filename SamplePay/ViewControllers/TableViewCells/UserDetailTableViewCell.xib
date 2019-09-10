@@ -37,7 +37,7 @@
                         <rect key="frame" x="130" y="13.5" width="174" height="17"/>
                         <nil key="textColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <textInputTraits key="textInputTraits"/>
+                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="string" keyPath="FontSizeType" value="MedHigh"/>
                             <userDefinedRuntimeAttribute type="string" keyPath="FontStyleType" value="Regular"/>

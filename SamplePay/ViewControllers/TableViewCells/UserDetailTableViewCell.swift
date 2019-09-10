@@ -8,11 +8,13 @@
 
 import UIKit
 
-class UserDetailTableViewCell: UITableViewCell {
-
+//MARK:- UserDetailTableViewCell
+final class UserDetailTableViewCell: UITableViewCell {
+    //MARK: IBOutlet Member declarations
     @IBOutlet weak var titleLable: UILabel!
     @IBOutlet weak var valueTF: UITextField!
     
+    //MARK: cellLifeCycle
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

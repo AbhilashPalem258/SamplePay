@@ -9,15 +9,18 @@
 import UIKit
 
 //MARK:- EnterUserDetailsTVC
-class EnterUserDetailsTVC: UITableViewController {
+final class EnterUserDetailsTVC: UITableViewController {
     //MARK: Member Declarations
     fileprivate lazy var doneButton = UIBarButtonItem.init(barButtonSystemItem: .done, target: self, action: #selector(handleDoneTap))
     fileprivate lazy var cancelButton = UIBarButtonItem.init(barButtonSystemItem: .cancel, target: self, action: #selector(handleCancelTap))
+    fileprivate var chosenImage: UIImage?
+    fileprivate var editedIndexPath: IndexPath?
     
     var delegate: SamplePayDelegate?
     
     //MARK: Member Declarations
     var tableListArr: [[String: String]]!
+    
     
     //MARK: ViewLifeCycle
     override func viewDidLoad() {
@@ -31,15 +34,7 @@ class EnterUserDetailsTVC: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-        
         self.view.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(viewTapped)))
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        NotificationCenter.default.removeObserver(self)
     }
 }
 
@@ -61,19 +56,27 @@ extension EnterUserDetailsTVC {
             cell.profileImgView.layer.borderWidth = 3.0
             cell.profileImgView.layer.borderColor = UIColor.white.cgColor
             cell.profileImgView.layer.masksToBounds = true
+            
+            self.chosenImage = image
             self.dismiss(animated: true, completion: nil)
         }
     }
     
     @objc func handleDoneTap() {
         let user = User.init()
-        user.firstName = tableListArr[0]["value"]
-        user.lastName = tableListArr[1]["value"]
-        user.mobile = tableListArr[2]["value"]
-        user.email = tableListArr[3]["value"]
-        
-        if let delegate = delegate {
-            delegate.didFinishedWithEnteringUserDetails(user: user)
+        do {
+            user.firstName = try FirstNameValidator().validated(tableListArr[0]["value"] ?? "")
+            user.lastName = try LastNameValidator().validated(tableListArr[1]["value"] ?? "")
+            user.mobile = try MobileValidator().validated(tableListArr[2]["value"] ?? "")
+            user.email = try EmailValidator().validated(tableListArr[3]["value"] ?? "")
+            user.profilePic = chosenImage
+            if let delegate = delegate {
+                delegate.didFinishedWithEnteringUserDetails(user: user)
+                self.dismiss(animated: true, completion: nil)
+            }
+            
+        } catch(let error) {
+            UIAlertController.displayAlert(message: (error as! ValidationError).message, title: "Error", inViewController: self)
         }
     }
     
@@ -100,17 +103,12 @@ extension EnterUserDetailsTVC {
         self.tableView.register(UINib.init(nibName: String(describing: UserPicEditTableViewCell.self), bundle: bundle), forCellReuseIdentifier: String(describing: UserPicEditTableViewCell.self))
         
         tableView.tableFooterView = UIView.init()
+        self.tableView.isScrollEnabled = false
         tableView.backgroundColor = UIColor.WhiteBGColor
         tableView.rowHeight = EnterUserDetailsTVCConstants.dimension.rowHeight
         tableView.separatorColor = UIColor.lineSeparatorColor
         tableView.delegate = self
         tableView.dataSource = self
-    }
-    
-    fileprivate func setTableListDetail(paramsHash: inout [String: String], element: [String: String], index: Int) {
-        if let value = self.tableListArr?[index]["value"] {
-            paramsHash[element["jsonKey"]!] = value
-        }
     }
     
     func convertModelIntoJson() {
@@ -124,11 +122,11 @@ extension EnterUserDetailsTVC {
                 "value": ""
             ],
             [
-                "key": "mobile",
+                "key": "Mobile",
                 "value": ""
             ],
             [
-                "key": "email",
+                "key": "Email",
                 "value": ""
             ]
         ]
@@ -180,24 +178,8 @@ extension EnterUserDetailsTVC: UITextFieldDelegate {
         }
         return true
     }
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        self.tableView.scrollToRow(at: IndexPath.init(row: textField.tag, section: 0), at: .middle, animated: true)
-    }
-    
+
     func textFieldDidEndEditing(_ textField: UITextField) {
         tableListArr?[textField.tag]["value"] = textField.text
-    }
-}
-//MARK: EnterUserDetailsTVC - KeyboardEventHandling Method Implementation
-extension EnterUserDetailsTVC {
-    @objc func keyboardWillShow(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            self.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardSize.height, right: 0)
-        }
-    }
-    
-    @objc func keyboardWillHide(notification: NSNotification) {
-        self.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
 }

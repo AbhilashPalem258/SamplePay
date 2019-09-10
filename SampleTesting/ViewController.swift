@@ -9,7 +9,12 @@
 import UIKit
 import SamplePay
 
-class ViewController: UIViewController {
+//MARK:- ViewController
+final class ViewController: UIViewController {
+    
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var textView: UITextView!
+    
     @IBAction func btnAction(_ sender: Any) {
         let options = SamplePayConfigurationOptions.init(rootViewController: self, delegate: self)
         SamplePay.shared.setConfigurationOptions(options: options)
@@ -22,9 +27,12 @@ class ViewController: UIViewController {
     }
     
 }
+//MARK:- ViewController: SamplePayDelegate Method Implementation
 extension ViewController: SamplePayDelegate {
     func didFinishedWithEnteringUserDetails(user: User!) {
-        print(user.fullName)
+        print(user!)
+        self.profileImageView.image = user.profilePic
+        self.textView.text = String(describing: user!)
     }
     
     func didClickedOnCancel() {
