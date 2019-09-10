@@ -1,7 +1,7 @@
 # SamplePay
 > A Demo project for learning iOS Framework integration with Cocoapods
 
-This demo projecct will help you in the following ways:
+This demo project will help you in the following ways:
 
 1. Create a swift framework  
 2. Convert swift framework to Universal framework, which can be integrated by both iPhoneOS and iPhoneSimulator
@@ -80,6 +80,46 @@ extension ViewController: SamplePayDelegate {
     func didClickedOnCancel() {
         print("cancelled")
     }
+}
+```
+
+#### SamplePayError 
+
+SamplePayError are the errors, which can be thrown incase of any code failure
+
+```swift
+//MARK:- SamplePayError
+public enum SamplePayError: Error {
+    case rootViewControllerNotSet
+}
+```
+
+#### SamplePayConfigurationOptions 
+
+Need to send the configuration options to SamplePay for proper functioning
+*Mandatory
+
+```swift
+//MARK:- SamplePayConfigurationOptions
+public struct SamplePayConfigurationOptions {
+    public weak var rootViewcontroller: UIViewController?
+    public weak var delegate: SamplePayDelegate?
+    public init(rootViewController: UIViewController?, delegate: SamplePayDelegate?) {
+        self.delegate = delegate
+        self.rootViewcontroller = rootViewController
+    }
+}
+```
+
+#### SamplePayDelegate 
+
+The delegate methods provide callbacks for some of the most commonly needed events, such as:
+
+```swift
+//MARK:- SamplePayDelegate
+public protocol SamplePayDelegate: AnyObject {
+   func didFinishedWithEnteringUserDetails(user: User!)
+   func didClickedOnCancel()
 }
 ```
 
