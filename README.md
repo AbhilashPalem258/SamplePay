@@ -1,6 +1,15 @@
 # SamplePay
 > A Demo project for learning iOS Framework integration with Cocoapods
 
+This demo projecct will help you in the following ways:
+
+1. Create a swift framework  
+2. Convert swift framework to Universal framework, which can be integrated by both iPhoneOS and iPhoneSimulator
+3. Publish Universal framework to cocoapods 
+4. Test driven development of pod using a test project 'SampleTesting'
+5. Work with native camera app and import the pic captured
+6. Communication between dynamic framework and test project
+
 ![Xcode 9.0+](https://img.shields.io/badge/Xcode-10.3%2B-blue.svg)
 ![iOS 8.0+](https://img.shields.io/badge/iOS-12.4%2B-blue.svg)
 ![Swift 4.0+](https://img.shields.io/badge/Swift-5.0%2B-orange.svg)
