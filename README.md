@@ -4,3 +4,5 @@
 ![Xcode 9.0+](https://img.shields.io/badge/Xcode-10.3%2B-blue.svg)
 ![iOS 8.0+](https://img.shields.io/badge/iOS-12.4%2B-blue.svg)
 ![Swift 4.0+](https://img.shields.io/badge/Swift-5.0%2B-orange.svg)
+[![CocoaPods](http://img.shields.io/cocoapods/v/Pod v0.1.1?style=flat)](http://cocoapods.org/?q=SamplePay)
+
