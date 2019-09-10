@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'SamplePay'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'A short description of SamplePay.'
  
   s.homepage         = 'https://github.com/AbhilashPalem258/SamplePay'
@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
 
   s.platform = :ios
   s.ios.deployment_target = '10.0'
- 
-  s.ios.vendored_frameworks = 'SamplePay.framework'
+  s.source            = { :http => 'https://github.com/AbhilashPalem258/SamplePay/raw/master/SamplePayUniversalFramework.zip' }
+  s.ios.vendored_frameworks = 'SamplePayUniversalFramework/SamplePay.framework'
  
 end

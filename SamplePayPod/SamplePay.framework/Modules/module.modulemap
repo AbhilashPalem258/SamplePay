@@ -1,0 +1,11 @@
+framework module SamplePay {
+  umbrella header "SamplePay.h"
+
+  export *
+  module * { export * }
+}
+
+module SamplePay.Swift {
+    header "SamplePay-Swift.h"
+    requires objc
+}
