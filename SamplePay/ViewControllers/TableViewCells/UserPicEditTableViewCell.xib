@@ -70,7 +70,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="camera_button" width="16" height="16"/>
-        <image name="placeholder_photo" width="16" height="16"/>
+        <image name="camera_button" width="41" height="41"/>
+        <image name="placeholder_photo" width="126" height="126"/>
     </resources>
 </document>

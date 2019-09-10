@@ -9,5 +9,5 @@
 import UIKit
 
 extension UIImage {
-    static let placeholderImage = UIImage.init(named: "placeholder_photo")
+    static let placeholderImage = UIImage.init(named: "placeholder_photo", in: Bundle(for: type(of: self) as! AnyClass), compatibleWith: nil)
 }

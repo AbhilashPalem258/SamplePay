@@ -28,12 +28,6 @@
 		FA170DAB232700B4002CE4AD /* RUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA170DA7232700B4002CE4AD /* RUITextField.swift */; };
 		FA170DAC232700B4002CE4AD /* RUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA170DA8232700B4002CE4AD /* RUIImageView.swift */; };
 		FA170DAE232700BE002CE4AD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA170DAD232700BE002CE4AD /* User.swift */; };
-		FA170DB5232700CB002CE4AD /* placeholder_photo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA170DAF232700CB002CE4AD /* placeholder_photo@3x.png */; };
-		FA170DB6232700CB002CE4AD /* camera_button@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA170DB0232700CB002CE4AD /* camera_button@3x.png */; };
-		FA170DB7232700CB002CE4AD /* placeholder_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = FA170DB1232700CB002CE4AD /* placeholder_photo.png */; };
-		FA170DB8232700CB002CE4AD /* placeholder_photo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA170DB2232700CB002CE4AD /* placeholder_photo@2x.png */; };
-		FA170DB9232700CB002CE4AD /* camera_button.png in Resources */ = {isa = PBXBuildFile; fileRef = FA170DB3232700CB002CE4AD /* camera_button.png */; };
-		FA170DBA232700CB002CE4AD /* camera_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA170DB4232700CB002CE4AD /* camera_button@2x.png */; };
 		FA170DC0232700D4002CE4AD /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA170DBB232700D3002CE4AD /* Font.swift */; };
 		FA170DC1232700D4002CE4AD /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA170DBC232700D3002CE4AD /* Colors.swift */; };
 		FA170DC2232700D4002CE4AD /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA170DBD232700D3002CE4AD /* Image.swift */; };
@@ -53,6 +47,7 @@
 		FA70F8B223279C270033794E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA70F8B023279C270033794E /* LaunchScreen.storyboard */; };
 		FA70F8B823279C880033794E /* SamplePay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA170D852326FEF0002CE4AD /* SamplePay.framework */; };
 		FA70F8BA23279C8D0033794E /* SamplePay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA170D852326FEF0002CE4AD /* SamplePay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FA70F8BF23279EF20033794E /* SPImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA70F8BE23279EF20033794E /* SPImages.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,12 +84,6 @@
 		FA170DA7232700B4002CE4AD /* RUITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RUITextField.swift; sourceTree = "<group>"; };
 		FA170DA8232700B4002CE4AD /* RUIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RUIImageView.swift; sourceTree = "<group>"; };
 		FA170DAD232700BE002CE4AD /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		FA170DAF232700CB002CE4AD /* placeholder_photo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeholder_photo@3x.png"; sourceTree = "<group>"; };
-		FA170DB0232700CB002CE4AD /* camera_button@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_button@3x.png"; sourceTree = "<group>"; };
-		FA170DB1232700CB002CE4AD /* placeholder_photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder_photo.png; sourceTree = "<group>"; };
-		FA170DB2232700CB002CE4AD /* placeholder_photo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeholder_photo@2x.png"; sourceTree = "<group>"; };
-		FA170DB3232700CB002CE4AD /* camera_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera_button.png; sourceTree = "<group>"; };
-		FA170DB4232700CB002CE4AD /* camera_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_button@2x.png"; sourceTree = "<group>"; };
 		FA170DBB232700D3002CE4AD /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		FA170DBC232700D3002CE4AD /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		FA170DBD232700D3002CE4AD /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
@@ -114,6 +103,7 @@
 		FA70F8AE23279C270033794E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA70F8B123279C270033794E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA70F8B323279C270033794E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA70F8BE23279EF20033794E /* SPImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SPImages.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,13 +149,13 @@
 			children = (
 				FA170DA32326FFC4002CE4AD /* RUIElements */,
 				FA170DA22326FFBB002CE4AD /* Model */,
-				FA170DA12326FFB0002CE4AD /* Images */,
 				FA170DA02326FFA1002CE4AD /* Utilities */,
 				FA170D9F2326FF92002CE4AD /* Constants */,
 				FA170D9E2326FF85002CE4AD /* ViewControllers */,
 				FA170D912326FF34002CE4AD /* SamplePay.swift */,
 				FA170D882326FEF0002CE4AD /* SamplePay.h */,
 				FA170D892326FEF0002CE4AD /* Info.plist */,
+				FA70F8BE23279EF20033794E /* SPImages.xcassets */,
 			);
 			path = SamplePay;
 			sourceTree = "<group>";
@@ -198,19 +188,6 @@
 				FA170DBF232700D4002CE4AD /* ImagePickerManager.swift */,
 			);
 			path = Utilities;
-			sourceTree = "<group>";
-		};
-		FA170DA12326FFB0002CE4AD /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				FA170DB3232700CB002CE4AD /* camera_button.png */,
-				FA170DB4232700CB002CE4AD /* camera_button@2x.png */,
-				FA170DB0232700CB002CE4AD /* camera_button@3x.png */,
-				FA170DB1232700CB002CE4AD /* placeholder_photo.png */,
-				FA170DB2232700CB002CE4AD /* placeholder_photo@2x.png */,
-				FA170DAF232700CB002CE4AD /* placeholder_photo@3x.png */,
-			);
-			path = Images;
 			sourceTree = "<group>";
 		};
 		FA170DA22326FFBB002CE4AD /* Model */ = {
@@ -361,14 +338,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA170DB7232700CB002CE4AD /* placeholder_photo.png in Resources */,
 				FA170DD1232700F4002CE4AD /* UserPicEditTableViewCell.xib in Resources */,
-				FA170DB8232700CB002CE4AD /* placeholder_photo@2x.png in Resources */,
-				FA170DB6232700CB002CE4AD /* camera_button@3x.png in Resources */,
-				FA170DBA232700CB002CE4AD /* camera_button@2x.png in Resources */,
-				FA170DB5232700CB002CE4AD /* placeholder_photo@3x.png in Resources */,
+				FA70F8BF23279EF20033794E /* SPImages.xcassets in Resources */,
 				FA170DD0232700F4002CE4AD /* UserDetailTableViewCell.xib in Resources */,
-				FA170DB9232700CB002CE4AD /* camera_button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
