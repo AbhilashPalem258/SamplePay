@@ -31,10 +31,9 @@ platform :ios, '8.0'
  pod 'SamplePay', '~> 0.1.1'
 ```
 
-To get the full benefits import `SamplePay` wherever you import UIKit
+To get the full benefits import `SamplePay` wherever you needed
 
 ``` swift
-import UIKit
 import SamplePay
 ```
 #### Privacy (iOS 10)
