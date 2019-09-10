@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		FA170DD3232704BB002CE4AD /* UniversalLib */ = {
+		FA70F8492327848F0033794E /* SamplePay-Universal */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = FA170DD4232704BB002CE4AD /* Build configuration list for PBXAggregateTarget "UniversalLib" */;
+			buildConfigurationList = FA70F84A232784900033794E /* Build configuration list for PBXAggregateTarget "SamplePay-Universal" */;
 			buildPhases = (
-				FA170DD7232704D5002CE4AD /* ShellScript */,
+				FA70F84D232784A00033794E /* ShellScript */,
 			);
 			dependencies = (
 			);
-			name = UniversalLib;
-			productName = UniversalLib;
+			name = "SamplePay-Universal";
+			productName = "SamplePay-Universal";
 		};
 /* End PBXAggregateTarget section */
 
@@ -239,7 +239,7 @@
 						CreatedOnToolsVersion = 10.3;
 						LastSwiftMigration = 1030;
 					};
-					FA170DD3232704BB002CE4AD = {
+					FA70F8492327848F0033794E = {
 						CreatedOnToolsVersion = 10.3;
 					};
 				};
@@ -257,7 +257,7 @@
 			projectRoot = "";
 			targets = (
 				FA170D842326FEF0002CE4AD /* SamplePay */,
-				FA170DD3232704BB002CE4AD /* UniversalLib */,
+				FA70F8492327848F0033794E /* SamplePay-Universal */,
 			);
 		};
 /* End PBXProject section */
@@ -281,7 +281,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		FA170DD7232704D5002CE4AD /* ShellScript */ = {
+		FA70F84D232784A00033794E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -468,6 +468,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = abhilash.SamplePay;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = NO;
@@ -504,7 +505,7 @@
 			};
 			name = Release;
 		};
-		FA170DD5232704BB002CE4AD /* Debug */ = {
+		FA70F84B232784900033794E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -513,7 +514,7 @@
 			};
 			name = Debug;
 		};
-		FA170DD6232704BB002CE4AD /* Release */ = {
+		FA70F84C232784900033794E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -543,11 +544,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FA170DD4232704BB002CE4AD /* Build configuration list for PBXAggregateTarget "UniversalLib" */ = {
+		FA70F84A232784900033794E /* Build configuration list for PBXAggregateTarget "SamplePay-Universal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FA170DD5232704BB002CE4AD /* Debug */,
-				FA170DD6232704BB002CE4AD /* Release */,
+				FA70F84B232784900033794E /* Debug */,
+				FA70F84C232784900033794E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -60,6 +60,10 @@ public class SamplePay {
         let userDetailsEnterVC = EnterUserDetailsTVC.init(style: .plain)
         userDetailsEnterVC.delegate = options?.delegate
         let navController = UINavigationController.init(rootViewController: userDetailsEnterVC)
+        navController.navigationBar.tintColor = UIColor.init(red: 0/255.0, green: 234/255.0, blue: 195/255.0, alpha: 1)
+         navController.navigationBar.backgroundColor = UIColor.clear
+         navController.navigationBar.shadowImage = UIImage()
+         navController.navigationBar.isTranslucent = false
         rootVc.present(navController, animated: true, completion: nil)
     }
 }
